@@ -1,3 +1,3 @@
 # scala-fp
 
-Based in Functional Programming in Scala
+Based on Functional Programming in Scala
