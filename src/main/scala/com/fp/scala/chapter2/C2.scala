@@ -1,10 +1,10 @@
-package com.fp.scala
+package com.scala.sample.project.book.chapter2
 
 import scala.annotation.tailrec
 
 object C2 extends App {
 
-  private def formatResult(name: String, n: Int, f: Int => Int): String = {
+  private def formatResult(name: String, n: Int, f: Int => Int) = {
     s"the $name of $n is ${f(n)}"
   }
 
@@ -17,7 +17,7 @@ object C2 extends App {
     go(n, 1)
   }
 
-  private def binarySeach[A](as: Array[A], key: A, gt: (A, A) => Boolean): Int = {
+  private def binarySearch[A](as: Array[A], key: A, gt: (A, A) => Boolean): Int = {
     @tailrec
     def go(low: Int, mid: Int, high: Int): Int = {
       if (low > high) -mid - 1
@@ -38,5 +38,8 @@ object C2 extends App {
   println(formatResult("factorial", 7, factorial))
 
   println(formatResult("increment", 7, _ + 1))
+
+  val f = (x: Double) => math.Pi / 2 - x
+  val cos = f andThen math.sin
 
 }

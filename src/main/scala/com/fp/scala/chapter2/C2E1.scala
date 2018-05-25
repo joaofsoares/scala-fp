@@ -1,4 +1,4 @@
-package com.fp.scala
+package com.scala.sample.project.book.chapter2
 
 import scala.annotation.tailrec
 
